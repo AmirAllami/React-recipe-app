@@ -1,21 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Content(props) {
   return (
     <div className="o-recep">
       <h1> {props.recepe.label} </h1>
       <img src={props.recepe.image} alt="what the recepie would look like" />
-      <ul>
-        {props.recepe.ingredientLines.map(a => (
-          <li>{a}</li>
-        ))}
-      </ul>
 
       <h3>
-        to see the full recipie{" "}
-        <a href={props.recepe.url} target="_blank">
-          click here !
-        </a>
+        to see the full recipie
+        <button>
+          <Link to={`/recipe/${props.recepe.uri.split("recipe_")[1]}`}>
+            More
+          </Link>
+        </button>
       </h3>
     </div>
   );

@@ -1,0 +1,34 @@
+.detailedData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contain {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li {
+  padding: 1px;
+  list-style: none;
+  margin-right: auto;
+}
+.dfoopic {
+  width: 80%;
+  height: 40vh;
+  margin-bottom: 10px;
+}
+.contain h1,
+.contain p {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  width: 100px;
+  height: 35px;
+}

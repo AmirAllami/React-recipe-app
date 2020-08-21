@@ -20,7 +20,7 @@ form {
 form input,
 form button {
   height: 25px;
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 
 form button {
@@ -34,8 +34,8 @@ form button {
   justify-content: space-around;
 }
 .o-recep {
-  border: 1px solid black;
-  flex-basis: 500px;
+  border: 1px solid grey;
+  flex-basis: 400px;
   margin-bottom: 10px;
   text-align: center;
 }
