@@ -8,9 +8,12 @@ function Content(props) {
       <img src={props.recepe.image} alt="what the recepie would look like" />
 
       <h3>
-        to see the full recipie
+        to see more Details
         <button>
-          <Link to={`/recipe/${props.recepe.uri.split("recipe_")[1]}`}>
+          <Link
+            to={`/recipe/${props.recepe.uri.split("recipe_")[1]}`}
+            className="Link"
+          >
             More
           </Link>
         </button>

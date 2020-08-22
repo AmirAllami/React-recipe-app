@@ -28,7 +28,8 @@ li {
   display: flex;
   justify-content: space-between;
 }
-button {
+.bb {
   width: 100px;
   height: 35px;
+  text-decoration: none;
 }

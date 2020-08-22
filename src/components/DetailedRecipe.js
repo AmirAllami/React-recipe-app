@@ -43,7 +43,7 @@ export default class DetailedRecipe extends Component {
                 className="dfoopic"
               />
               <p>
-                this recepi contains {detailedD.recipe.calories}
+                this recepi contains {Math.round(detailedD.recipe.calories)}
                 calories
               </p>
               <div>

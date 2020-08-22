@@ -44,3 +44,11 @@ form button {
   list-style: none;
   margin-bottom: 5px;
 }
+.Link {
+  text-decoration: none;
+  color: black;
+}
+.replacingHeader {
+  margin-top: 100px;
+  text-align: center;
+}

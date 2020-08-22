@@ -18,12 +18,29 @@ export default class firstpage extends Component {
           changeQuery={this.props.changeQuery}
           searchReceipe={this.props.searchReceipe}
         />
-        <div className="wrapper">
-          {this.props.data1.map((a, i) => (
-            <Content recepe={a.recipe} key={i} />
-          ))}
-        </div>
+        {this.props.data1.length === 0 ? (
+          <h1 className="replacingHeader">
+            Please Search for a food for Example: "chicken"{" "}
+          </h1>
+        ) : (
+          <div className="wrapper">
+            {this.props.data1.map((a, i) => (
+              <Content recepe={a.recipe} key={i} />
+            ))}
+          </div>
+        )}
       </div>
     );
   }
 }
+// {this.props.data1.length === 0 ? (
+//   <h1 className="replacingHeader">
+//     Please Search for a food for Example: "chicken"{" "}
+//   </h1>
+// ) : (
+//   <div className="wrapper">
+//     {this.props.data1.map((a, i) => (
+//       <Content recepe={a.recipe} key={i} />
+//     ))}
+//   </div>
+// )}
