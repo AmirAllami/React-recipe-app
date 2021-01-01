@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import FirstPage from "./components/FirstPage";
 import DetailedRecipe from "./components/DetailedRecipe";
+import NavBar from "./components/NavBar";
 import "./App.css";
 
 class App extends React.Component {
@@ -28,6 +29,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar
+          changeQuery={this.changeQuery}
+          searchReceipe={this.searchReceipe}
+        />
         <Switch>
           <Route
             exact

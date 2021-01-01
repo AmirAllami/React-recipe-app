@@ -70,9 +70,3 @@ export default class DetailedRecipe extends Component {
     );
   }
 }
-
-{
-  /* <div>
-
-</div> */
-}

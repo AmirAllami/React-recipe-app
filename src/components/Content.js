@@ -7,17 +7,16 @@ function Content(props) {
       <h1> {props.recepe.label} </h1>
       <img src={props.recepe.image} alt="what the recepie would look like" />
 
-      <h3>
-        to see more Details
-        <button>
-          <Link
-            to={`/recipe/${props.recepe.uri.split("recipe_")[1]}`}
-            className="Link"
-          >
-            More
-          </Link>
-        </button>
-      </h3>
+      <div className="more">
+        <h3>To see more Details</h3>
+
+        <Link
+          to={`/recipe/${props.recepe.uri.split("recipe_")[1]}`}
+          className="Link"
+        >
+          HERE
+        </Link>
+      </div>
     </div>
   );
 }

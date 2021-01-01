@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar";
 import Content from "./Content";
 
 export default class firstpage extends Component {
@@ -13,14 +12,10 @@ export default class firstpage extends Component {
 
   render() {
     return (
-      <div>
-        <NavBar
-          changeQuery={this.props.changeQuery}
-          searchReceipe={this.props.searchReceipe}
-        />
+      <div className="recepies-container">
         {this.props.data1.length === 0 ? (
           <h1 className="replacingHeader">
-            Please Search for a food for Example: "chicken"{" "}
+            Please Search for a food for Example: "chicken"
           </h1>
         ) : (
           <div className="wrapper">
