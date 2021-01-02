@@ -28,7 +28,6 @@ export default class DetailedRecipe extends Component {
     return (
       <div>
         <div className="header">
-          <h1>Recipe App</h1>
           <Link to="/">
             <button className="bb">GO Back</button>
           </Link>
@@ -36,32 +35,38 @@ export default class DetailedRecipe extends Component {
         <div className="detailedData">
           {Object.keys(detailedD).length !== 0 && (
             <div className="contain">
-              <h1> {detailedD.recipe.label} </h1>
-              <img
-                src={detailedD.recipe.image}
-                alt="the coocked food"
-                className="dfoopic"
-              />
-              <p>
-                this recepi contains {Math.round(detailedD.recipe.calories)}
-                calories
-              </p>
-              <div>
-                <p>To coock this beatiful recipe all you need is:</p>
-                <ul className="list-ing">
-                  {detailedD.recipe.ingredientLines.map((a, i) => (
-                    <li key={i}> {a} </li>
-                  ))}
-                </ul>
+              <h1 className="rTitle"> {detailedD.recipe.label} </h1>
+              <div className="rec-container">
+                <img
+                  src={detailedD.recipe.image}
+                  alt="the coocked food"
+                  className="dfoopic"
+                />
+                <div className="rec-info">
+                  <p>
+                    this recepi contains {Math.round(detailedD.recipe.calories)}
+                    calories
+                  </p>
+                  <div>
+                    <p>To coock this beatiful recipe all you need is:</p>
+                    <ul className="list-ing">
+                      {detailedD.recipe.ingredientLines.map((a, i) => (
+                        <li key={i}> {a} </li>
+                      ))}
+                    </ul>
 
-                <h3>TO see full recepie</h3>
-                <a
-                  target="_blank"
-                  href={detailedD.recipe.url}
-                  rel="noopener noreferrer"
-                >
-                  Click Here!
-                </a>
+                    <h3>
+                      TO see full recepie{" "}
+                      <a
+                        target="_blank"
+                        href={detailedD.recipe.url}
+                        rel="noopener noreferrer"
+                      >
+                        Click Here!
+                      </a>
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           )}
